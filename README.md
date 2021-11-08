@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# breaking-bad-display-application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Breve descripción
 
-## Available Scripts
+La aplicación ha sido realizada usando la última versión de React JS.
 
-In the project directory, you can run:
+Se ha empleado i18next para dotar a la aplicación de dos lenguajes distintos en los que mostrar el contenido, inglés y español. La aplicación detectará el lenguaje del navegador automáticamente, pero se facilitan dos botones en el menú superior donde poder cambiarlo manualmente.
 
-### `npm start`
+Se ha empleado axios para las llamadas a la API de breakingbadapi.com. Se han creado dos servicios para el manejo de estas llamadas y recuperación de la información. Un servicio para obtener los personajes (todos en forma de lista o de forma individual buscando por id), y otro servicio para obtener las citas más famosas de los personajes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Se ha utilizado la librería material-ui para usar ciertos componentes visuales como toggle buttons, toolbars, cards, grids, etc.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Se ha usado react-router-dom para la navegación por la página. La ruta raíz (/) redirigirá la aplicación hacia /characters, que es la dirección principal. De ahí, pulsando sobre las fichas de los personajes se irá a character/{id}, donde se mostrará una página de detalles. Para volver a la página principal se facilita un botón "home" en el menú superior y un botón de "volver atrás" en el propio cuerpo de la página.
 
-### `npm test`
+Se ha hecho uso de "useStyles" para la mayor parte de diseño de la página, así como otros hooks (useState, useHistory de react-router-dom, useEffect y useTranslation).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Organización
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Partimos de la estructura general de un proyecto base de react (creado con create-react-app).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Dentro de src/ en la carpeta ui-components encontraremos dos componentes puramente visuales y genéricos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Dentro de la carpeta characters/ podemos encontrar todo lo relativo a la muestra de personajes de breaking bad.
 
-### `npm run eject`
+CharacterRouter.js es el fichero que se encarga del routing de la aplicación.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+En la carpeta services/ están los dos servicios descritos ya con anterioridad.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+En la carpeta components/ están todos los componentes visuales particulares de la parte de personajes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Arranque de la aplicación
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Para levantar la aplicación sólo hay que realizar dos pasos.
 
-## Learn More
+- En primer lugar ejecutar por consola el comando "npm install" para instalar todas las dependencias.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Con esto terminado, se puede sencillamente ejecutar "npm start" y esto levantará la aplicación en "localhos:3000"

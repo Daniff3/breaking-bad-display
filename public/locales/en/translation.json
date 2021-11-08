@@ -1,0 +1,24 @@
+{
+    "app title": "Breaking Bad character display application",
+    "languages": {
+        "spanish": "Spanish",
+        "english": "English"
+    },
+    "character": {
+        "nickname": "Nickname",
+        "details": "Details",
+        "name": "Name",
+        "birthday": "Birthday",
+        "occupation": "Occupation",
+        "status": "Status",
+        "portrayed": "Portrayed by",
+        "show": "Show",
+        "quote": "Quote",
+        "quote not found": "There is no remarkable quote",
+        "occupation unknown": "Occupation unknown"
+    },
+    "actions": {
+        "go back": "Go back",
+        "refresh quote": "Frefresh quote"
+    }
+}

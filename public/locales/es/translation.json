@@ -1,0 +1,24 @@
+{
+    "app title": "Aplicación de muestra de personajes de Breaking Bad",
+    "languages": {
+        "spanish": "Español",
+        "english": "Inglés"
+    },
+    "character": {
+        "nickname": "Apodo",
+        "details": "Detalles",
+        "name": "Nombre",
+        "birthday": "Cumpleaños",
+        "occupation": "Ocupación",
+        "status": "Estado",
+        "portrayed": "Interpretado por",
+        "show": "Serie",
+        "quote": "Cita",
+        "quote not found": "No hay ninguna cita reseñable",
+        "occupation unknown": "Ocupacion desconocida"
+    },
+    "actions": {
+        "go back": "Volver",
+        "refresh quote": "Refrescar cita"
+    }
+}
