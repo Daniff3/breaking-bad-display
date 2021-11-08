@@ -36,3 +36,7 @@ Para levantar la aplicación sólo hay que realizar dos pasos.
 - En primer lugar ejecutar por consola el comando "npm install" para instalar todas las dependencias.
 
 - Con esto terminado, se puede sencillamente ejecutar "npm start" y esto levantará la aplicación en "localhos:3000"
+
+## Aclaración final
+
+Soy consciente de que era un requisito haber hecho pruebas, y no las hice. No es que se me olvidara es que no me dio tiempo a hacer más, me quedé corto estimando el tiempo que me llevaría hacer las cosas.
